@@ -89,27 +89,36 @@
             <div class="w-full md:w-1/2 p-8 bg-white bg-opacity-10 rounded-lg shadow-lg">
                 <h2 class="text-2xl font-semibold mb-4">Get in Touch</h2>
                 <form action="https://api.staticforms.xyz/submit" method="post" class="space-y-4">
-                    <div>
-                        <label for="name" class="sr-only">Your Name</label>
-                        <input id="name" class="w-full py-2 px-4 bg-transparent border-b border-gray-300 focus:outline-none" type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div>
-                        <label for="email" class="sr-only">Your Email</label>
-                        <input id="email" class="w-full py-2 px-4 bg-transparent border-b border-gray-300 focus:outline-none" type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div>
-                        <label for="message" class="sr-only">Your Message</label>
-                        <textarea id="message" class="w-full py-2 px-4 bg-transparent border-b border-gray-300 focus:outline-none h-32 resize-none" name="message" placeholder="Your Message" required></textarea>
-                    </div>
+                    
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input id="name" class="w-full py-2 px-4 bg-transparent border-b border-gray-300 focus:outline-none" type="text" name="name" placeholder="Your Name" required>
+                    
+                    <label for="email" class="sr-only">Your Email</label>
+                    <input id="email" class="w-full py-2 px-4 bg-transparent border-b border-gray-300 focus:outline-none" type="email" name="email" placeholder="Your Email" required>
+                    
+                    <label for="message" class="sr-only">Your Message</label>
+                    <textarea id="message" class="w-full py-2 px-4 bg-transparent border-b border-gray-300 focus:outline-none h-32 resize-none" name="message" placeholder="Your Message" required></textarea>
+                    
                     <input type="text" name="honeypot" style="display:none">
                     <input type="hidden" name="accessKey" value="aaaaaaaa-bbbb-cccc-dddd-eeee6666kkkk">
                     <input type="hidden" name="subject" value="Contact us from - example.com">
                     <input type="hidden" name="replyTo" value="@">
                     <input type="hidden" name="redirectTo" value="https://example.com/contact/success">
+                    
                     <button class="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white font-semibold rounded-md transition-all duration-300" type="submit">Send</button>
                 </form>
             </div>
         </section>
     </main>
+    
+    <footer class="bg-[#111111] w-full gap-12 flex items-center justify-center text-white">
+        <p class="py-10">Icons supplied by 
+            <a href="https://icons8.com/" target="_blank" class="underline">icons8</a>
+        </p>
+
+        <p class="py-10">Hand-coded by
+            <a class="underline" href="jacksweb.co.uk" target="_blank">jackweb.co.uk</a>
+        </p>
+    </footer>
 </body>
 </html>
