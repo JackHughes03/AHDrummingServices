@@ -71,29 +71,21 @@
         </section>
     </header>
     
-    <main class="bg-[#1A150F] text-white">
-        <section>
-            <h2 id="about" class="text-4xl font-bold text-center pt-10">Equipment</h2>
+    <main class="bg-[#1A150F] text-white border-t-4">
+        <section class="grid place-items-center">
+            <h2 id="about" class="text-4xl font-bold text-center pt-6">Equipment</h2>
             <p class="text-center opacity-80 mt-2">Find about more about the equipment you would use.</p>
             
-            <div class="flex flex-col items-center justify-center">
-                <h3 class="font-bold text-lg mt-6">Drum kit</h3>
-                <p class="text-center">You would use a £3000 Mapex drum kit, with zildjian cymbals.</p>
-                
-                <h3 class="font-bold text-lg mt-6">Room</h3>
-                <ul class="list-disc">
-                    <li>Hand-built, custom, recording studio</li>
-                    <li>Built in sound proof panels in the walls</li>
-                    <li>Added sound proof stuck on panels on the walls</li>
-                    <li>Small square panels to filter out smaller noises</li>
-                    <li>Reinforced sound proof door</li>
-                </ul>
-                
-                <button onclick="showStudio()" id="showStudioButton" class="bg-green-800 px-4 py-2 rounded-md mt-10">View Images</button>
-                
-                <img id="studio" class="hidden lg:w-1/2 w-full mt-4" src="/src/studio.JPG" alt="Image of the studio" title="Image of the studio">
-            </div>
-        </section>        
+            <button onclick="showStudio()" id="showStudioButton" class="bg-[#6CA6C1] text-black font-semibold px-4 py-2 rounded-md mt-6">View Images</button>
+            <img id="studio" class="hidden lg:w-1/2 w-full mt-4" src="src/studio.JPG" alt="Image of the studio" title="Image of the studio">
+            
+            <section class="flex items-center justify-center flex-wrap mb-4 md:mb-0 md:gap-10 gap-2 mt-6">
+                <div class="bg-[#00000080] w-[200px] h-[100px] rounded-md flex items-center justify-center text-center p-4">Hand-built, custom rocording studio</div>
+                <div class="bg-[#00000080] w-[200px] h-[100px] rounded-md flex items-center justify-center text-center p-4">Built in sound proof panels in the walls</div>
+                <div class="bg-[#00000080] w-[200px] h-[100px] rounded-md flex items-center justify-center text-center p-4">Small square panels to filter out smaller noises</div>
+                <div class="bg-[#00000080] w-[200px] h-[100px] rounded-md flex items-center justify-center text-center p-4">Reinforced sound proof door</div>
+            </section>
+        </section>
         
         <section class="mx-auto flex items-center justify-center md:p-10 p-4">
             <div class="w-full md:w-1/2 p-8 bg-white bg-opacity-10 rounded-lg shadow-lg">
@@ -152,7 +144,7 @@
         function showStudio() {
             const studio = document.getElementById('studio'),
             studioButton = document.getElementById('showStudioButton');
-        
+            
             studio.style.display === 'block' ? studio.style.display = 'none' : studio.style.display = 'block';
             studioButton.innerHTML === 'View Images' ? studioButton.innerHTML = 'Hide Images' : studioButton.innerHTML = 'View Images';
         }
