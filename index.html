@@ -19,21 +19,6 @@
             background-position: center;
         }
     </style>
-    
-    <script>
-        function hideSmallNav() {
-            document.getElementById('smallNav').style.opacity = '0';
-            document.getElementById('smallNav').style.zIndex = '0';
-            document.getElementById('hamburger').style.zIndex = '0';
-        }
-        
-        function showSmallNav() {
-            document.getElementById('smallNav').style.opacity = '1';
-            document.getElementById('smallNav').style.zIndex = '40';
-            document.getElementById('hamburger').style.zIndex = '40';
-        }
-    </script>
-    
 </head>
 <body class="bg-black">
     <header class="h-screen w-full">
@@ -44,17 +29,17 @@
                 <li class="hover:bg-white duration-200 cursor-pointer hover:text-black py-2 px-2 rounded-md"><a href="#home">Home</a></li>
                 <li class="hover:bg-white duration-200 cursor-pointer hover:text-black py-2 px-2 rounded-md"><a href="#about">About</a></li>
                 <li class="hover:bg-white duration-200 mr-3 cursor-pointer hover:text-black py-2 px-2 rounded-md"><a href="#services">Services</a></li>
-                <li class="bg-[#6CA6C1] p-2 px-3  rounded-md text-black font-bold hover:px-4 duration-200"><a href="">contact</a></li>
+                <li class="bg-[#6CA6C1] p-2 px-3 rounded-md text-black font-bold hover:px-4 duration-200"><a href="">contact</a></li>
             </ul>
             
             <button onclick="showSmallNav()" id="hamburger" class="md:hidden block absolute right-4 w-6 text-sm cursor-pointer">
-                <img src="src/hamburger.png" alt="">
+                <img src="src/hamburger.png" alt="Icon of 2 lines" title="Icon of 2 lines">
             </button>
         </nav>
         
         <nav id="smallNav" class="h-full w-1/2 bg-[#111111c6] duration-200 backdrop-blur-md absolute right-0 opacity-0 max-w-sm">
             <button onclick="hideSmallNav()" class="absolute right-2 top-2 w-10">
-                <img src="src/x.png" alt="">
+                <img src="src/x.png" alt="Icon of an X" title="Icon of an X">
             </button>
             
             <ul class="flex flex-col text-white text-lg gap-12 duration-200 items-center justify-center h-full">
@@ -72,7 +57,7 @@
         
         <section class="w-full absolute bottom-0 flex flex-col items-center justify-center">
             <section class="rounded-full bg-[#ffffff20] shadow-2xl overflow-hidden w-[150px] h-[150px] md:w-[250px] md:h-[250px] shadow-black">
-                <img src="src/me2.png" alt="">
+                <img src="src/me2.png" alt="Picture of me" title="Picture of me">
             </section>
             
             <hr class="w-[80%] border-[3px] max-w-3xl md:m-10 m-5 rounded-full border-[#6CA6C1]">
@@ -81,18 +66,38 @@
                 <h2 class="font-bold text-3xl">Archie Hughes</h2>
                 <p class="mt-2 opacity-80">18 years old.</p>
                 <p class="opacity-80">Drummer with 10 years of experence.</p>
-                <p class="opacity-80">I have 3 years of band experience, live performing, recording, and teaching.</p>
+                <p class="opacity-80">3 years of band experience, live performing, recording, and teaching.</p>
             </section>
         </section>
     </header>
     
     <main class="bg-[#1A150F] text-white">
-        <section class="bg-[#1A150F]">
-            <h2 id="about" class="text-4xl font-bold text-center pt-20">Equipment</h2>
-            <p class="text-center opacity-80 mt-2">I use a state-of-the-art drum kit and equipment.</p>
+        <section>
+            <h2 id="about" class="text-4xl font-bold text-center pt-10">Equipment</h2>
+            <p class="text-center opacity-80 mt-2">Find about more about the equipment you would use.</p>
+            
+            <div class="flex flex-col items-center justify-center">
+                <h3 class="font-bold text-lg mt-6">Drum kit</h3>
+                <p class="text-center">You would use a £3000 Mapex drum kit, with zildjian cymbals.</p>
+                
+                <h3 class="font-bold text-lg mt-6">Room</h3>
+                <ul class="list-disc">
+                    <li>Hand-built, custom, recording studio</li>
+                    <li>Built in sound proof panels in the walls</li>
+                    <li>Added sound proof stuck on panels on the walls</li>
+                    <li>Small square panels to filter out smaller noises</li>
+                    <li>Reinforced sound proof door</li>
+                </ul>
+                
+                <button onclick="showStudio()" id="showStudioButton" class="bg-green-800 px-4 py-2 rounded-md mt-10">View Images</button>
+                
+                <img id="studio" class="hidden lg:w-1/2 w-full mt-4" src="/src/studio.JPG" alt="Image of the studio" title="Image of the studio">
+            </div>
         </section>
+
         
-        <section class="mx-auto flex items-center justify-center p-10">
+        
+        <section class="mx-auto flex items-center justify-center md:p-10 p-4">
             <div class="w-full md:w-1/2 p-8 bg-white bg-opacity-10 rounded-lg shadow-lg">
                 <h2 class="text-2xl font-semibold mb-4">Get in Touch</h2>
                 <form action="https://api.staticforms.xyz/submit" method="post" class="space-y-4">
@@ -125,9 +130,35 @@
             </p>
             
             <p class="md:py-10 py-6 text-center">Hand-coded by
-                <a class="underline" href="jacksweb.co.uk" target="_blank">jackweb.co.uk</a>
+                <a class="underline" href="https://jacksweb.co.uk" target="_blank">jackweb.co.uk</a>
             </p>
         </div>
     </footer>
+    
+    <script>
+        const smallNav = document.getElementById('smallNav'),
+        hamburger = document.getElementById('hamburger');
+        
+        function hideSmallNav() {
+            smallNav.style.opacity = '0';
+            smallNav.style.zIndex = '0';
+            hamburger.style.zIndex = '0';
+        }
+        
+        function showSmallNav() {
+            smallNav.style.opacity = '1';
+            smallNav.style.zIndex = '40';
+            hamburger.style.zIndex = '40';
+        }
+        
+        function showStudio() {
+            const studio = document.getElementById('studio'),
+            studioButton = document.getElementById('showStudioButton');
+        
+            // ternary operator
+            studio.style.display === 'block' ? studio.style.display = 'none' : studio.style.display = 'block';
+            studioButton.innerHTML === 'View Images' ? studioButton.innerHTML = 'Hide Images' : studioButton.innerHTML = 'View Images';
+        }
+    </script>
 </body>
 </html>
