@@ -93,9 +93,7 @@
                 
                 <img id="studio" class="hidden lg:w-1/2 w-full mt-4" src="/src/studio.JPG" alt="Image of the studio" title="Image of the studio">
             </div>
-        </section>
-
-        
+        </section>        
         
         <section class="mx-auto flex items-center justify-center md:p-10 p-4">
             <div class="w-full md:w-1/2 p-8 bg-white bg-opacity-10 rounded-lg shadow-lg">
@@ -123,7 +121,7 @@
         </section>
     </main>
     
-    <footer class="bg-[#111111] w-full flex justify-center items-center">
+    <footer class="bg-[#111111] w-full text-sm md:text-base flex justify-center items-center">
         <div class="flex gap-6 md:gap-12 text-white items-center justify-center">
             <p class="md:py-10 py-6 text-center">Icons supplied by 
                 <a href="https://icons8.com/" target="_blank" class="underline">icons8</a>
@@ -155,7 +153,6 @@
             const studio = document.getElementById('studio'),
             studioButton = document.getElementById('showStudioButton');
         
-            // ternary operator
             studio.style.display === 'block' ? studio.style.display = 'none' : studio.style.display = 'block';
             studioButton.innerHTML === 'View Images' ? studioButton.innerHTML = 'Hide Images' : studioButton.innerHTML = 'View Images';
         }
