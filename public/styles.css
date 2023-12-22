@@ -662,9 +662,6 @@ video {
 .border-b {
   border-bottom-width: 1px;
 }
-.border-t-4 {
-  border-top-width: 4px;
-}
 .border-\[\#6CA6C1\] {
   --tw-border-opacity: 1;
   border-color: rgb(108 166 193 / var(--tw-border-opacity));
